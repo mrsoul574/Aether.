@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aether VPN - اینترنت سریع، امن و بدون مرز</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Vazirmatn -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            cyan: '#00f2fe',
+                            purple: '#9d4edd',
+                            blue: '#4cc9f0',
+                            dark: '#080811',
+                            card: '#121222',
+                            border: '#22223b'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Vazirmatn', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #080811;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #00f2fe 0%, #9d4edd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-gradient-brand {
+            background: linear-gradient(135deg, #00f2fe 0%, #9d4edd 100%);
+        }
+        .glass-card {
+            background: rgba(18, 18, 34, 0.75);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glow-effect {
+            box-shadow: 0 0 35px -5px rgba(0, 242, 254, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-gray-100 antialiased selection:bg-cyan-500 selection:text-black">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-brand-border/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <div class="w-10 h-10 rounded-xl bg-gradient-brand p-0.5 flex items-center justify-center shadow-lg shadow-cyan-500/20">
+                    <div class="w-full h-full bg-brand-dark rounded-[10px] flex items-center justify-center">
+                        <i class="fa-solid fa-bolt text-brand-cyan text-xl"></i>
+                    </div>
+                </div>
+                <span class="text-2xl font-black tracking-wider text-gradient">AETHER</span>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-8 space-x-reverse font-medium text-gray-300">
+                <a href="#features" class="hover:text-brand-cyan transition-colors duration-200">ویژگی‌ها</a>
+                <a href="#protocols" class="hover:text-brand-cyan transition-colors duration-200">پروتکل‌ها</a>
+                <a href="#download" class="hover:text-brand-cyan transition-colors duration-200">دانلود برنامه</a>
+                <a href="#faq" class="hover:text-brand-cyan transition-colors duration-200">راهنما و سوالات</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <a href="https://t.me/aether578" target="_blank" class="hidden sm:inline-flex items-center space-x-2 space-x-reverse glass-card hover:bg-white/5 px-4 py-2 rounded-xl text-sm font-semibold transition border border-white/10 text-brand-cyan">
+                    <i class="fa-brands fa-telegram text-lg"></i>
+                    <span>کانال تلگرام</span>
+                </a>
+                <a href="#download" class="bg-gradient-brand hover:opacity-90 text-black font-bold px-5 py-2.5 rounded-xl transition duration-300 shadow-lg shadow-cyan-500/20 inline-flex items-center space-x-2 space-x-reverse">
+                    <i class="fa-solid fa-download text-sm"></i>
+                    <span>دانلود Aether</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-36 pb-16 md:pt-48 md:pb-24 overflow-hidden">
+        <!-- Glowing Lights -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-brand-cyan/15 rounded-full blur-[140px] pointer-events-none"></div>
+        <div class="absolute top-1/3 right-1/4 w-[450px] h-[450px] bg-brand-purple/20 rounded-full blur-[150px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center space-x-2 space-x-reverse px-4 py-2 rounded-full glass-card border border-brand-cyan/30 text-brand-cyan mb-8 text-sm font-semibold">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>نسخه جدید v1.4.0 آماده دانلود</span>
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-6">
+                اتصال امن، سریع و پایدار با <br>
+                <span class="text-gradient">Aether VPN</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                عبور مطمئن از محدودیت‌ها با پروتکل‌های پیشرفته. عملکرد روان، پایداری بالا و امنیت واقعی برای تمامی سیستم‌عامل‌ها.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+                <button onclick="requestTelegramJoin('https://github.com/QW-AI-Code/Aether/releases/download/v1.4.0-build.21/Aether-1.4.0-arm64-v8a.apk')" 
+                        class="w-full sm:w-auto bg-gradient-brand text-black font-bold text-lg px-8 py-4 rounded-xl hover:scale-105 transition duration-300 glow-effect flex items-center justify-center space-x-3 space-x-reverse">
+                    <i class="fa-solid fa-download"></i>
+                    <span>دریافت مستقیم نسخه اندروید</span>
+                </button>
+                <a href="https://t.me/aether578" target="_blank" class="w-full sm:w-auto glass-card hover:bg-white/5 text-white font-semibold text-lg px-8 py-4 rounded-xl border border-white/10 transition duration-300 flex items-center justify-center space-x-2 space-x-reverse">
+                    <i class="fa-brands fa-telegram text-brand-cyan"></i>
+                    <span>عضویت در کانال تلگرام</span>
+                </a>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-brand-border/60 max-w-4xl mx-auto">
+                <div class="glass-card p-4 rounded-xl">
+                    <h3 class="text-3xl font-black text-brand-cyan mb-1">64-Bit</h3>
+                    <p class="text-xs text-gray-400">بهینه‌سازی شده برای ARM64</p>
+                </div>
+                <div class="glass-card p-4 rounded-xl">
+                    <h3 class="text-3xl font-black text-brand-purple mb-1">32-Bit</h3>
+                    <p class="text-xs text-gray-400">پشتیبانی کامل از ARMv7</p>
+                </div>
+                <div class="glass-card p-4 rounded-xl">
+                    <h3 class="text-3xl font-black text-white mb-1">0 Log</h3>
+                    <p class="text-xs text-gray-400">حفظ کامل حریم خصوصی</p>
+                </div>
+                <div class="glass-card p-4 rounded-xl">
+                    <h3 class="text-3xl font-black text-brand-blue mb-1">AGPL-3.0</h3>
+                    <p class="text-xs text-gray-400">متن‌باز و رایگان</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Preview & Features Section -->
+    <section id="features" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">ویژگی‌های برجسته <span class="text-gradient">Aether</span></h2>
+                <p class="text-gray-400 max-w-xl mx-auto">چرا فیلترشکن Aether گزینه‌ای مطمئن برای ارتباطات روزمره شماست؟</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <!-- App Interface Screenshot -->
+                <div class="rounded-3xl overflow-hidden border border-brand-border/80 shadow-2xl glass-card">
+                    <img src="./1000000149.png" onerror="this.src='1000000149.png'" alt="Aether App Interface" class="w-full h-auto object-cover" loading="lazy">
+                </div>
+
+                <!-- Features Cards Grid -->
+                <div class="space-y-6">
+                    <div class="glass-card p-6 rounded-2xl border border-brand-border hover:border-brand-cyan/50 transition-all duration-300 flex items-start space-x-4 space-x-reverse">
+                        <div class="w-12 h-12 bg-brand-cyan/10 rounded-xl flex items-center justify-center text-brand-cyan text-xl shrink-0">
+                            <i class="fa-solid fa-crosshairs"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Automatic Endpoint Discovery</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed">اسکن و انتخاب تمیزترین و سریع‌ترین اندپوینت‌ها به صورت کاملاً خودکار و هوشمند.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border border-brand-border hover:border-brand-purple/50 transition-all duration-300 flex items-start space-x-4 space-x-reverse">
+                        <div class="w-12 h-12 bg-brand-purple/10 rounded-xl flex items-center justify-center text-brand-purple text-xl shrink-0">
+                            <i class="fa-solid fa-shield-cat"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">طراحی‌شده برای مقاومت بالا</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed">ترکیب WireGuard، MASQUE و WARP-in-WARP برای شبیه‌سازی ترافیک عادی و عبور از DPI.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border border-brand-border hover:border-brand-cyan/50 transition-all duration-300 flex items-start space-x-4 space-x-reverse">
+                        <div class="w-12 h-12 bg-brand-cyan/10 rounded-xl flex items-center justify-center text-brand-cyan text-xl shrink-0">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">دستیار هوش مصنوعی Gemini</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed">دارای دستیار هوشمند داخلی (Built-in Gemini AI Assistant) جهت راهنمایی کاربر.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Protocols Badge Section -->
+    <section id="protocols" class="py-12 bg-brand-card/40 border-y border-brand-border/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-xl font-bold text-white mb-6">پروتکل‌ها و روش‌های ارتباطی پشتیبانی شده</h3>
+            <div class="flex flex-wrap justify-center gap-3">
+                <span class="px-4 py-2 rounded-xl glass-card border border-brand-cyan/30 text-brand-cyan text-xs font-bold">Smart Auto</span>
+                <span class="px-4 py-2 rounded-xl glass-card border border-brand-cyan/30 text-brand-cyan text-xs font-bold">MASQUE (HTTP/2 & HTTP/3)</span>
+                <span class="px-4 py-2 rounded-xl glass-card border border-brand-purple/30 text-brand-purple text-xs font-bold">WireGuard</span>
+                <span class="px-4 py-2 rounded-xl glass-card border border-brand-purple/30 text-brand-purple text-xs font-bold">Gool (WARP-in-WARP)</span>
+                <span class="px-4 py-2 rounded-xl glass-card border border-brand-blue/30 text-brand-blue text-xs font-bold">Psiphon Chain</span>
+                <span class="px-4 py-2 rounded-xl glass-card border border-brand-blue/30 text-brand-blue text-xs font-bold">Tor Network</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="py-20 relative bg-brand-card/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">دانلود مستقیم فایل <span class="text-gradient">APK</span></h2>
+                <p class="text-gray-400 max-w-xl mx-auto">نسخه متناسب با پردازنده گوشی خود را دانلود کنید</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                <!-- High-End Download Card (ARM64-v8a) -->
+                <div class="glass-card p-8 rounded-3xl border border-brand-cyan/30 hover:border-brand-cyan transition-all duration-300 relative overflow-hidden group flex flex-col justify-between">
+                    <div class="absolute -top-12 -left-12 w-32 h-32 bg-brand-cyan/20 rounded-full blur-2xl group-hover:bg-brand-cyan/40 transition-colors"></div>
+                    
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="px-3 py-1 bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/30 rounded-full text-xs font-bold">
+                                پیشنهاد شده (گوشی‌های جدید)
+                            </span>
+                            <i class="fa-solid fa-mobile-screen text-3xl text-brand-cyan"></i>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-white mb-2">نسخه ARM64-v8a</h3>
+                        <p class="text-sm text-gray-300 mb-4 font-semibold">مخصوص گوشی‌های متوسط، جدید و بالارده (۶۴ بیتی)</p>
+                        
+                        <ul class="text-xs text-gray-400 space-y-2 mb-8">
+                            <li class="flex items-center space-x-2 space-x-reverse">
+                                <i class="fa-solid fa-check text-brand-cyan"></i>
+                                <span>مناسب برای اندروید 8 و بالاتر</span>
+                            </li>
+                            <li class="flex items-center space-x-2 space-x-reverse">
+                                <i class="fa-solid fa-check text-brand-cyan"></i>
+                                <span>حداکثر سرعت و پردازش روان‌تر</span>
+                            </li>
+                            <li class="flex items-center space-x-2 space-x-reverse">
+                                <i class="fa-solid fa-check text-brand-cyan"></i>
+                                <span>نسخه v1.4.0-build.21</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button onclick="requestTelegramJoin('https://github.com/QW-AI-Code/Aether/releases/download/v1.4.0-build.21/Aether-1.4.0-arm64-v8a.apk')" 
+                       class="w-full bg-gradient-brand text-black font-bold py-4 rounded-xl transition duration-300 flex items-center justify-center space-x-3 space-x-reverse hover:shadow-lg hover:shadow-cyan-500/30">
+                        <i class="fa-solid fa-download text-lg"></i>
+                        <span>دانلود مستقیم APK (ARM64)</span>
+                    </button>
+                </div>
+
+                <!-- Budget Download Card (ARMeabi-v7a) -->
+                <div class="glass-card p-8 rounded-3xl border border-brand-purple/30 hover:border-brand-purple transition-all duration-300 relative overflow-hidden group flex flex-col justify-between">
+                    <div class="absolute -top-12 -left-12 w-32 h-32 bg-brand-purple/20 rounded-full blur-2xl group-hover:bg-brand-purple/40 transition-colors"></div>
+
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="px-3 py-1 bg-brand-purple/10 text-brand-purple border border-brand-purple/30 rounded-full text-xs font-bold">
+                                سازگاری حداکثری (گوشی‌های قدیمی‌تر)
+                            </span>
+                            <i class="fa-solid fa-mobile-screen-button text-3xl text-brand-purple"></i>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-white mb-2">نسخه ARMeabi-v7a</h3>
+                        <p class="text-sm text-gray-300 mb-4 font-semibold">مخصوص گوشی‌های قدیمی‌تر یا اقتصادی (۳۲ بیتی)</p>
+                        
+                        <ul class="text-xs text-gray-400 space-y-2 mb-8">
+                            <li class="flex items-center space-x-2 space-x-reverse">
+                                <i class="fa-solid fa-check text-brand-purple"></i>
+                                <span>سازگار با اندروید 7 و پایین‌تر</span>
+                            </li>
+                            <li class="flex items-center space-x-2 space-x-reverse">
+                                <i class="fa-solid fa-check text-brand-purple"></i>
+                                <span>مصرف بسیار کم منابع سخت‌افزاری</span>
+                            </li>
+                            <li class="flex items-center space-x-2 space-x-reverse">
+                                <i class="fa-solid fa-check text-brand-purple"></i>
+                                <span>نسخه v1.4.0-build.21</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button onclick="requestTelegramJoin('https://github.com/QW-AI-Code/Aether/releases/download/v1.4.0-build.21/Aether-1.4.0-armeabi-v7a.apk')" 
+                       class="w-full bg-brand-border hover:bg-brand-purple hover:text-white text-white font-bold py-4 rounded-xl transition duration-300 flex items-center justify-center space-x-3 space-x-reverse">
+                        <i class="fa-solid fa-download text-lg"></i>
+                        <span>دانلود مستقیم APK (ARMv7)</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-brand-card/30">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">سوالات متداول</h2>
+                <p class="text-gray-400">راهنمای انتخاب نسخه مناسب و نصب برنامه</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="glass-card border border-brand-border rounded-2xl overflow-hidden">
+                    <button class="w-full p-5 text-right flex justify-between items-center focus:outline-none" onclick="toggleFaq('faq1')">
+                        <span class="font-bold text-white">کدام نسخه را برای گوشی خود دانلود کنم؟</span>
+                        <i id="faq1-icon" class="fa-solid fa-chevron-down text-brand-cyan transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq1" class="hidden px-5 pb-5 text-gray-400 text-sm leading-relaxed border-t border-brand-border/40 pt-3">
+                        اگر گوشی شما جدیدتر است (تولید چند سال اخیر یا اندروید ۸ به بالا)، نسخه <strong>ARM64-v8a</strong> را دانلود کنید. اگر گوشی قدیمی‌تری دارید یا مطمئن نیستید، نسخه <strong>ARMeabi-v7a</strong> بر روی تمام دستگاه‌ها اجرا می‌شود.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="glass-card border border-brand-border rounded-2xl overflow-hidden">
+                    <button class="w-full p-5 text-right flex justify-between items-center focus:outline-none" onclick="toggleFaq('faq2')">
+                        <span class="font-bold text-white">چگونه فایل APK را نصب کنم؟</span>
+                        <i id="faq2-icon" class="fa-solid fa-chevron-down text-brand-cyan transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq2" class="hidden px-5 pb-5 text-gray-400 text-sm leading-relaxed border-t border-brand-border/40 pt-3">
+                        پس از دانلود فایل، روی آن بزنید. در صورت درخواست مجوز "نصب از منابع ناشناس" (Install from Unknown Sources) را تایید کنید تا نصب انجام شود.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Telegram Mandatory Join -->
+    <div id="telegramModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="glass-card border border-brand-cyan/40 rounded-3xl p-6 sm:p-8 max-w-md w-full text-center relative overflow-hidden shadow-2xl">
+            <div class="w-16 h-16 bg-brand-cyan/10 border border-brand-cyan/30 rounded-2xl flex items-center justify-center mx-auto mb-5 text-brand-cyan text-3xl">
+                <i class="fa-brands fa-telegram"></i>
+            </div>
+            <h3 class="text-2xl font-black text-white mb-2">عضویت در کانال تلگرام</h3>
+            <p class="text-gray-300 text-sm mb-6 leading-relaxed">
+                برای حمایت از پروژه و دریافت بروزرسانی‌های سریع، لطفاً ابتدا در کانال تلگرام <span class="text-brand-cyan font-bold">Aether</span> عضو شوید.
+            </p>
+
+            <div class="space-y-3">
+                <a id="tgChannelBtn" href="https://t.me/aether578" target="_blank" onclick="enableDownloadBtn()" class="w-full bg-brand-cyan text-black font-bold py-3.5 rounded-xl hover:opacity-90 transition duration-300 flex items-center justify-center space-x-2 space-x-reverse">
+                    <i class="fa-brands fa-telegram text-lg"></i>
+                    <span>۱. عضویت در کانال تلگرام (@aether578)</span>
+                </a>
+                
+                <button id="startDownloadBtn" onclick="proceedDownload()" disabled class="w-full bg-brand-border text-gray-500 font-bold py-3.5 rounded-xl cursor-not-allowed transition duration-300 flex items-center justify-center space-x-2 space-x-reverse">
+                    <i class="fa-solid fa-download text-lg"></i>
+                    <span>۲. دانلود فایل APK</span>
+                </button>
+            </div>
+
+            <button onclick="closeTgModal()" class="mt-4 text-xs text-gray-500 hover:text-gray-300 transition">انصراف</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-brand-border/60 py-12 bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-right flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <div class="w-8 h-8 rounded-lg bg-gradient-brand p-0.5 flex items-center justify-center">
+                    <div class="w-full h-full bg-brand-dark rounded-[6px] flex items-center justify-center">
+                        <i class="fa-solid fa-bolt text-brand-cyan text-sm"></i>
+                    </div>
+                </div>
+                <span class="text-xl font-bold text-gradient">AETHER VPN</span>
+            </div>
+
+            <p class="text-gray-500 text-sm">
+                © پروژه Aether VPN. تمامی حقوق محفوظ است.
+            </p>
+
+            <div class="flex space-x-4 space-x-reverse text-gray-400 text-xl">
+                <a href="https://github.com/CluvexStudio/Aether" target="_blank" class="hover:text-brand-cyan transition-colors"><i class="fa-brands fa-github"></i></a>
+                <a href="https://t.me/aether578" target="_blank" class="hover:text-brand-cyan transition-colors"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let pendingDownloadUrl = "";
+
+        function requestTelegramJoin(downloadUrl) {
+            pendingDownloadUrl = downloadUrl;
+            document.getElementById('telegramModal').classList.remove('hidden');
+        }
+
+        function enableDownloadBtn() {
+            const btn = document.getElementById('startDownloadBtn');
+            btn.disabled = false;
+            btn.classList.remove('bg-brand-border', 'text-gray-500', 'cursor-not-allowed');
+            btn.classList.add('bg-gradient-brand', 'text-black', 'hover:opacity-90');
+        }
+
+        function proceedDownload() {
+            if (pendingDownloadUrl) {
+                window.open(pendingDownloadUrl, '_blank');
+                closeTgModal();
+            }
+        }
+
+        function closeTgModal() {
+            document.getElementById('telegramModal').classList.add('hidden');
+        }
+
+        function toggleFaq(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById(id + '-icon');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+    </script>
+</body>
+  </html>
+  
